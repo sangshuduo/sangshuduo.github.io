@@ -1235,6 +1235,7 @@ label.el-checkbox {
   margin-bottom: 20px;
   list-style: none;
   border-radius: 4px;
+  color: #004cff;
 }
 .breadcrumb>li {
   display: inline-block;
