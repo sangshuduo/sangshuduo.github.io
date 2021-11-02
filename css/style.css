@@ -1272,7 +1272,8 @@ label.el-checkbox {
     color: #004cff;
   }
   .posts .post-title {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
   }
   .postname {
     overflow: hidden;
