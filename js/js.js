@@ -27,7 +27,7 @@ function getCookie(key) {
 
 function updateStyle() {
     if (getCookie("style") == "white") {
-        $("#footer").attr("style", "color: #969696;");
+        $("#footer").attr("style", "color: #004cff;");
         $(".flink").attr("style", "color: #969696;");
         $(".ba").attr("style", "color: #969696;");
         $("#bodyx").attr("class", "bg_while");
