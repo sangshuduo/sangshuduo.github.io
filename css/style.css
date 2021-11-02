@@ -22,7 +22,7 @@ a:hover {
 .footer {
   text-align: center;
   margin-top: 30px;
-  color: #ccc;
+  color: #004cff;
 }
 .clear {
   clear: both;
@@ -184,7 +184,7 @@ a {
 .post-content h6::before {
   content: "#";
   padding-right: 10px;
-  color: #6d9ee7;
+  color: #004cff;
 }
 .post-content h1 .octicon-link,
 .post-content h2 .octicon-link,
@@ -1268,6 +1268,7 @@ label.el-checkbox {
   }
   .posttime {
     display: none;
+    color: #004cff;
   }
   .posts .post-title {
     font-size: 16px;
@@ -1276,5 +1277,6 @@ label.el-checkbox {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #004cff;
   }
 }
