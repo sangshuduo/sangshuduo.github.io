@@ -28,25 +28,25 @@
  replay-btn" aria-hidden="true"></i></a>
     <div class="post-title">
         <p>
-            debug tips if something wrong when brew install something
+            Debug tips if something wrong when brew install something
         </p>
         <hr>
     </div>
     <div class="post-content">
-        <p>I have to say homebrew is hard to debug if something wrong when build package although it’s de-factor package manager on Mac for developer.</p>
-<p>If brew install something failed, you can use following command to see more info:</p>
+        <p>I have to say homebrew is hard to debug if something is wrong when building a package although it’s a de-facto package manager on Mac for the developer.</p>
+<p>If ‘brew install something’ failed, you can use the following command to see more info:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install -v your_package</span><br></pre></td></tr></table></figure>
 
-<p>If you can’t found useful info, you can find the logs from:</p>
+<p>If you can’t find useful info, you can find the logs from:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">Logs:</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/00.options.out</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/CMakeFiles</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/01.cmake.cc</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/01.cmake</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/02.make.cc</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/CMakeCache.txt</span><br><span class="line">     /Users/YOURNAME/Library/Logs/Homebrew/PACKAGENAME@PACKAGEVERSION/02.make</span><br><span class="line">If reporting this issue please do so at (not Homebrew/brew or Homebrew/core):</span><br></pre></td></tr></table></figure>
 
 <p>You can edit the following file to add more debug option, for example ‘make V=1’:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/Homebrew/Library/Taps/&lt;TAPNAME&gt;/homebrew-&lt;REPONAME&gt;/&lt;PACKAGENAME&gt;@&lt;PACKAGEVERSION&gt;.rb</span><br></pre></td></tr></table></figure>
 
-<p>Finally, if some program can’t find, it might be the reason superenv bring. You can consider use std env in formula like:</p>
+<p>Finally, if some program can’t find, it might be the reason superenv bring. You can consider using std env in the formula like:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class PACKAGENAME &lt; Formula</span><br><span class="line">  env :std</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
 
-<p>Above is what I learnt in this morning.</p>
+<p>Above is what I learned this morning.</p>
 
     </div>
 
