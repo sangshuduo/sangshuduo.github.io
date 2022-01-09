@@ -33,13 +33,13 @@
         <hr>
     </div>
     <div class="post-content">
-        <p>I have been worked a while to make test coverage service like CodeCov and CoverAlls working with TDengine two years ago. At that time, Travis is still first choice as a free and online CI service. I remember that is not much pain to make Travis/CodeCov/CoverAlls/CoverityScan working together. In following days, my colleague took over the maintaince and move the CI from public to self-host for many reasons. One of key reason is Travis (and few other conterparts) no more free.</p>
-<p>As a repo named ‘taos-tools’ splitted from TDengine, and as a TDengine’s submodule, the CI and test became a little complicated. I need find a way to have more confidence to submit the code to TDengine and avoid worrying its failure waste my few hours. I see GitHub action could be a good choice. Free, flexible, and easy-github-integration of cause. </p>
-<p>Yes, make GitHub action working with a GitHub repo is very easy. But make other services working with GitHub action is not.</p>
-<p>Many of them were mature to work with Travis or CircleCI or AppVeyor. So even some of them don’t provide enough document for GitHub integration. </p>
-<p>In the begining time, I use a GitHub action workflow to make CodeCov working. Pretty easy. But after some more steps added, sometime I found it does not fully working. I mean, most parts still work but the function showing which code block be tested does not. After few days searching, I gave up. Totally no clue.</p>
-<p>Then I have to re-enable Coveralls. It was pain since it is that one of “even some of them don’t provide enough document”. After countless tries, finally it works. Not perfect, but what I need, including tested code coverage and badge works now.</p>
-<p>Then I can use it to find out what test need to be added. The workflow is located at <a target="_blank" rel="noopener" href="https://github.com/taosdata/taos-tools/blob/develop/.github/workflows/coveralls.yml">here</a>.</p>
+        <p>I have worked a while to make test coverage services like CodeCov and CoverAlls working with TDengine two years ago. At that time, Travis is still the first choice as a free and online CI service. I remember that is not much pain to make Travis/CodeCov/CoverAlls/CoverityScan work together. In the following days, my colleague took over the maintenance and move the CI from public to self-host for many reasons. One of the key reasons is Travis (and a few other conterparts) is no more free.</p>
+<p>As a repo named ‘taos-tools’ split from TDengine, and as a TDengine’s submodule, the CI and test became a little complicated. I need to find a way to have more confidence to submit the code to TDengine and avoid worrying about its failure waste my few hours. I see GitHub action could be a good choice. Free, flexible, and easy-github-integration of cause. </p>
+<p>Yes, making GitHub action work with a GitHub repo is very easy, stand to reason. But making other services work with GitHub action is not.</p>
+<p>Many of them were mature to work with Travis or CircleCI or AppVeyor. So even some of them don’t provide enough documents for GitHub integration. </p>
+<p>In the beginning time, I use a GitHub action workflow to make CodeCov work. Pretty easy. But after some more steps were added, I found it does not fully work. I mean, most parts still work but the most important function showing which code block be tested does not. After a few days of searching, I gave up. I have no clue at all.</p>
+<p>Then I have to re-enable Coveralls. It was a pain since it is that one of “even some of them don’t provide enough document”. After countless tries, finally, it works. Not perfect, but what I need, including tested code coverage and badge works now.</p>
+<p>Then I can use it to find out what test needs to be added. The workflow is located at <a target="_blank" rel="noopener" href="https://github.com/taosdata/taos-tools/blob/develop/.github/workflows/coveralls.yml">here</a> if you are interested.</p>
 
     </div>
 
